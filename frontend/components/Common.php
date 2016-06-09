@@ -9,11 +9,11 @@ class Common extends Component{
 
     const EVENT_NOTIFY = 'notify_admin';
 
-    public function sendMail($subject,$text,$emailFrom='maxshabl@yandex.ru',$nameFrom='КОЛЬЦА ДЛЯ КОЛОДЦЕВ')
+    public function sendMail($subject,$text,$emailTo='tikhmenev@mail.ru',$nameFrom='КОЛЬЦА ДЛЯ КОЛОДЦЕВ')
     {
         if(\Yii::$app->mail->compose()
-            ->setFrom(['max-vvvv@yandex.ru' => 'КОЛЬЦА ДЛЯ КОЛОДЦЕВ'])
-            ->setTo([$emailFrom => $nameFrom])
+            ->setFrom(['jbi33@yandex.ru' => 'КОЛЬЦА ДЛЯ КОЛОДЦЕВ'])
+            ->setTo([$emailTo => $nameFrom])
             ->setSubject($subject)
             ->setHtmlBody($text)
             ->send()){

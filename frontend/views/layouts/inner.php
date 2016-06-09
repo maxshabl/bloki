@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 
-\frontend\assets\MainAsset::register($this);
+\frontend\assets\SailorAsset::register($this);
 ?>
 <?
   $this->beginPage();
@@ -10,8 +10,14 @@ use yii\bootstrap\Nav;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title><?=$this->title ?> </title>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link id="t-colors" href="/source/skins/default.css" rel="stylesheet" />
+
+
+    <!-- boxed bg -->
+    <link id="bodybg" href="/source/bg1.css" rel="stylesheet" type="text/css" />
     <?= Html::csrfMetaTags() ?>
     <?php $this->head() ?>
 </head>
@@ -26,24 +32,23 @@ use yii\bootstrap\Nav;
   <? echo $this->render("//common/head") ?>
 <!-- #Header Starts -->
 
-<div class="inside-banner">
+
+<section id="content">
     <div class="container">
-        <span class="pull-right"><a href="#"></a>  <?//=$this->title ?></span>
-        <h2><?=$this->title ?></h2>
+        <div class="row">
+
+                <div class="col-lg-8">
+
+                    <p><?=$content ?></p>
+                </div>
+
+        </div>
     </div>
-</div>
-<!-- banner -->
-
-<!-- banner -->
-<div class="container">
-    <div class="spacer">
-        <?=$content ?>
-    </div>
-</div>
+</section>
 
 
 
-        <? echo $this->render("//common/footer") ?>
+<? echo $this->render("//common/footer") ?>
 
 <?
 $this->endBody();

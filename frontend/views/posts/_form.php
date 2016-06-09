@@ -68,7 +68,8 @@ use mihaildev\ckeditor\CKEditor;
     <?= $form->field($model, 'postscol')->dropDownList([
         'Blog'=>'Блог',
         'about' => 'О нас',
-        'delivery' => 'Доставка'
+        'delivery' => 'Доставка',
+        'main' => 'Главная'
          ]);
     ?>
 

@@ -7,12 +7,12 @@ use yii\helpers\Url;
 <div class="container">
     <div class="spacer blog">
         <div class="row">
-            <div class="col-lg-8 col-sm-12 ">
+
 
                 <?php foreach ($posts as $post): ?>
                 <div class="row">
 
-                    <div class="col-lg-8 col-sm-8 ">
+                    <div class="col-lg-offset-3 col-lg-6  ">
                         <h3><?=$post->title?></h3>
 
                         <div class="info"><?=(date("d  F  Y "))?></div>
@@ -28,7 +28,7 @@ use yii\helpers\Url;
                 <!-- agents -->
 
 
-            </div>
+
         </div>
     </div>
 </div>

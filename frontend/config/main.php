@@ -9,12 +9,14 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
+
     'bootstrap' => ['log'],
     'name'=>'JBI33',
     'layout' => 'inner',
 
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+
         'formatter' => [
             'class' => 'yii\i18n\Formatter',
             'dateFormat' => 'd-M-Y',
@@ -30,8 +32,8 @@ return [
                 'port'       => '465',
                 'smtpsecure' => 'ssl',
                 'smtpauth'   => true,
-                'username'   => 'max-vvvv@yandex.ru',
-                'password'   => '150666njvf',
+                'username'   => 'jbi33@yandex.ru',
+                'password'   => 'dR0VNGs5',
                 'ishtml' => true,
                 'charset' => 'UTF-8',
             ],
@@ -60,7 +62,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            'view/<id:\d+>' => 'posts/blog',
+           'posts/blog/<id:\d+>' => 'posts/blog',
             ],
         ],
 
@@ -84,5 +86,6 @@ return [
             ]
         ]
     ],
+
     'params' => $params,
 ];

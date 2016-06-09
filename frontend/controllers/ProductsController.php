@@ -166,7 +166,33 @@ class ProductsController extends Controller
             'pagination' => $pagination,
         ]);
     }
+    public function actionList2(){
+        $query = Products::find();
 
+        $pagination = new Pagination([
+            'defaultPageSize' => 11,
+            'totalCount' => $query->count(),
+        ]);
 
+        $products = $query->orderBy('id')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('list2', [
+            'products' => $products,
+            'pagination' => $pagination,
+        ]);
+    }
+    public function actionItem()
+    {
+
+        $item = Products::find()->where(['id' => Yii::$app->request->get('id')])->one();
+
+        return $this->render('item', [
+            'item' => $item,
+
+        ]);
+    }
 
 }
