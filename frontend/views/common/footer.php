@@ -3,72 +3,95 @@
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 
-use frontend\assets\MainAsset;
+use frontend\assets\SailorAsset;
 
 
 
 
-MainAsset::register($this);
+SailorAsset::register($this);
 ?>
 
 
-<div class="footer">
-
+<footer>
     <div class="container">
-
-
-
         <div class="row">
-            <div class="row">
-                <div class="col-lg-3 col-sm-3">
-                    <h4>Разделы сайта</h4>
-                    <ul class="row">
-                        <li class="col-lg-12 col-sm-12 col-xs-3"><a href="/site/index" >Главная</a></li>
-                        <li class="col-lg-12 col-sm-12 col-xs-3"><a href="/site/about" >О нас</a></li>
-                        <li class="col-lg-12 col-sm-12 col-xs-3"><a href="/site/contact" >Контакты</a></li>
-                        <li class="col-lg-12 col-sm-12 col-xs-3"><a href="/site/delivery" >Доставка</a></li>
-                        <li class="col-lg-12 col-sm-12 col-xs-3"><a href="/products/list" >Продукты</a></li>
-                        <li class="col-lg-12 col-sm-12 col-xs-3"><a href="/posts/lenta" >Блог</a></li>
-                        <?if (Yii::$app->user->isGuest) {
-                            echo '<li class="col-lg-12 col-sm-12 col-xs-3"><a href="/site/login" >Войти</a></li>';
-                        } else {
-                           // echo '<li class="col-lg-12 col-sm-12 col-xs-3"><a href="/site/logout" >Выйти</a></li>';
-                        }?>
+            <div class="col-sm-3 col-lg-3">
+                <div class="widget">
+                    <h4>Навигация на сайте</h4>
+                    <ul class="link-list">
+                        <li ><a href="/site/index" >Главная</a></li>
+                        <li ><a href="/site/about" >О нас</a></li>
+                        <li ><a href="/site/contact" >Контакты</a></li>
+                        <li ><a href="/site/delivery" >Доставка</a></li>
+                        <li ><a href="/products/list" >Продукты</a></li>
+                        <li "><a href="/posts/lenta" >Блог</a></li>
                     </ul>
+
+                </div>
+            </div>
+            <div class="col-sm-3 col-lg-3">
+                <div class="widget">
+                    <h4>Наш адрес</h4>
+                    <address>
+                        <strong> </strong>Владимирская область,<br>
+                        поселок Садовый (17-й МЮД), <br>ул. Графского, д.1<br>
+                         </address>
+                        <i class="icon-envelope-alt"></i><b>EMAIL</b> <br>tikhmenev@mail.rum
                 </div>
 
-            <div class="col-lg-3 col-sm-3">
-                <h4>Подписаться</h4>
-                <p>Оставте свой email, чтобы получать последние новости о нас, нашей продукции и новых публикациях на нашем сайте.</p>
-                <form class="form-inline" role="form">
-                    <input type="text" placeholder="Enter Your email address" class="form-control">
-                    <button class="btn btn-success" type="button">Notify Me!</button></form>
             </div>
-
-            <div class="col-lg-3 col-sm-3">
-                <h4>Найти нас</h4>
-                <a href="#"><img src="/images/facebook.png"  alt="facebook"></a>
-                <a href="#"><img src="/images/twitter.png"  alt="twitter"></a>
-                <a href="#"><img src="/images/linkedin.png"  alt="linkedin"></a>
-                <a href="#"><img src="/images/instagram.png"  alt="instagram"></a>
+            <div class="col-sm-3 col-lg-3">
+                <div class="widget">
+                    <h4>Телефоны для связи:</h4>
+                    <ul class="topleft-info">
+                        <i class="fa fa-phone"></i>  +7 (4922) 60-30-36 <br>
+                        <i class="fa fa-phone"></i>  +7 (904) 260-04-04<br>
+                        <i class="fa fa-phone"></i>  +7 (920) 906-72-06<br>
+                        <i class="fa fa-phone"></i>  +7 (903) 830-72-06<br>
+                    </ul>
+                </div>
             </div>
-
-            <div class="col-lg-3 col-sm-3">
-                <h4>Связаться с нами</h4>
-                <p><br>
-                    <b> Адрес: Владимирская область, поселок Садовый (17-й МЮД), ул. Графского, д.1 <br><br>
-                    hello@bootstrapreal.com<br><br>
-                    Телефон для связи: <br>
-                    60-30-36,<br>
-
-                    8(904)260-04-04 <br>
-
-                    8(920)906-72-06<br>
-
-                    8(903)830-72-06</b></p>
+            <div class="col-sm-3 col-lg-3">
+                <div class="widget">
+                    <h4>Подписка</h4>
+                    <p>Оставьте Ваш электронный адрес и получайте новости нашего сайта</p>
+                    <div class="form-group multiple-form-group input-group">
+                        <input type="email" name="email" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-theme btn-add">EMAIL</button>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="copyright">Copyright 2016. All rights reserved by JBI 33.ru 	</p>
+    </div>
+    <div id="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright">
+                        <p>
+							<span>&copy;  All right reserved. | <a href="http://JBI33.ru/">jbi33.ru</a>
+                             <!--
+                                All links in the footer should remain intact.
+                                Licenseing information is available at: http://bootstraptaste.com/license/
+                                You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Sailor
+                            -->
 
-
-    </div></div>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="social-network">
+                        <li><a href="https://vk.com/id22603258" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://vk.com/id22603258" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://vk.com/id22603258" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://vk.com/id22603258" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="https://vk.com/id22603258" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/source/jsjs/jquery.cubeportfolio.min.js"></script>

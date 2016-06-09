@@ -12,7 +12,7 @@ class MainAsset extends  AssetBundle{
 
     public $css = [
 
-        'source/bootstrap/css/bootstrap.css',
+        //'source/bootstrap/css/bootstrap.css',
         'source/style.css',
 
         'source/owl-carousel/owl.carousel.css',

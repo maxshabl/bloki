@@ -1,18 +1,12 @@
 
 
-<style>
-    h1, h2, h3, h4, h5, h6, div, p, span {
-        text-indent: 0em;
 
-
-    }
-</style>
 
 <?php $this->registerMetaTag(['name' => 'keywords', 'content' => $post->keywords]);?>
 <div class="container">
     <div class="spacer">
         <div class="row">
-            <div class="col-lg-8  col-lg-offset-2">
+            <div class="col-lg-12">
                 <?=$post->title?>
                  <?=$post->text?>
 

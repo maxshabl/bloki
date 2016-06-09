@@ -20,6 +20,7 @@ use yii\data\Pagination;
 /**
  * Site controller
  */
+
 class SiteController extends Controller
 {
 
@@ -78,8 +79,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = "bootstrap";
-        return $this->render('index');
+        $this->layout = "main";
+        $post = Posts::find()->where(['postscol' => 'main'])->one();
+        return $this->render('index', [
+            'post' => $post,
+
+        ]);
+
+
     }
 
     /**
@@ -131,7 +138,7 @@ class SiteController extends Controller
             \Yii::$app->common->sendMail($model->subject,$model->body);
 
             print "Send success";
-            die;
+
         }
         return $this->render('contact', ['model' => $model]);
        /* $model = new ContactForm();

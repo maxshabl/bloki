@@ -12,12 +12,20 @@ use yii\bootstrap\Nav;
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <?=Html::csrfMetaTags() ?>
     <?php $this->head() ?>
-
+    <style>
+        div.page-container {
+            min-width: 1024px;
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
-<?php $this->beginBody() ?>
 
+<?php $this->beginBody() ?>
+<div class="page-container">
 <?=$this->render("//common/head") ?>
 <div class="">
 
@@ -143,8 +151,9 @@ use yii\bootstrap\Nav;
 </div>
 <!-- /.modal -->
 
-
+</div>
 <?php $this->endBody() ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>
